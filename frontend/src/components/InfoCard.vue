@@ -1,6 +1,6 @@
 <template>
-  <div class="info-card">
-      <h1 class="title">{{title}}</h1>
+  <div class="info-card grid gap-y-6">
+      <h1 class="title mb-5 mt-3">{{title}}</h1>
 
       <div class="content">
           <slot name="content"></slot>

@@ -1,23 +1,45 @@
 <template>
-  <h1 class="title">
-    Listen UA
-  </h1>
-  <p class="info-text">
-    This page visualizes all the ukrainian music albums released in 2019 <br>
-    The data is gathered by <a href="https://aristocrats.fm/">Radio Aristocrats</a> as part of their Aprize Awards<br>
-    In the previous years the detailed analysis was done by <a href="https://texty.org.ua/d/2019/aprize/">Texty.org.ua</a>
-  </p>
+  <div class="grid gap-y-3">
+    <h1 class="title">Listen UA</h1>
+    <p class="info-text">
+      This page visualizes all the ukrainian music albums released in 2019
+      <br />The data is gathered by
+      <a href="https://aristocrats.fm/">Radio Aristocrats</a> as part of their Aprize Awards
+      <br />In the previous years the detailed analysis was done by
+      <a href="https://texty.org.ua/d/2019/aprize/">Texty.org.ua</a>
+    </p>
 
-  <InfoCard title="Some numbers">
-    <template v-slot:content>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-    </template>
-  </InfoCard>
+    <InfoCard title="Some numbers" class="mt-5">
+      <template v-slot:content>
+        <div class="grid grid-cols-1 md:grid-cols-4 place-items-center">
+          <div class="grid place-items-center">
+            <CircleIndicator />
+            <label class="text-2xl mt-2">albums</label>
+          </div>
 
+          <div class="grid place-items-center">
+            <CircleIndicator />
+            <label class="text-2xl mt-2">EPs</label>
+          </div>
+
+          <div class="grid place-items-center">
+            <CircleIndicator />
+            <label class="text-2xl mt-2">artists</label>
+          </div>
+
+          <div class="grid place-items-center">
+            <CircleIndicator />
+            <label class="text-2xl mt-2">genres</label>
+          </div>
+        </div>
+      </template>
+    </InfoCard>
+  </div>
 </template>
 
 <script setup>
 import InfoCard from "./InfoCard.vue";
+import CircleIndicator from "./CircleIndicator.vue";
 </script>
 
 <style scoped>
