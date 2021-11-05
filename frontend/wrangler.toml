@@ -1,0 +1,7 @@
+name = "listen-ua"
+account_id="cfe7974cc8e54bdc9d5e89b2878c3a33" 
+type = "webpack"
+compatibility_flags = []
+workers_dev = true
+site = {bucket = "./dist",entry-point = "workers-site"}
+compatibility_date = "2021-10-18"
