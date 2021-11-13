@@ -1,6 +1,6 @@
 <template>
   <div class="grid gap-y-3">
-    <h1 class="title">Listen UA</h1>
+    <h1 class="title">{{ $t('Listen UA') }}</h1>
     <p class="info-text">
       This page visualizes all the ukrainian music albums released in 2019
       <br />The data is gathered by
