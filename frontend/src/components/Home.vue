@@ -1,12 +1,15 @@
 <template>
   <div class="grid gap-y-3">
-    <h1 class="title">{{ $t('Listen UA') }}</h1>
+    <LanguageSwitch :languages="['en', 'ua']" v-model="currentLanguage"></LanguageSwitch>
+    <h1 class="title">{{ $t('title') }}</h1>
     <p class="info-text">
-      This page visualizes all the ukrainian music albums released in 2019
+      This page visualizes all the ukrainian music albums released in 2020
       <br />The data is gathered by
       <a href="https://aristocrats.fm/">Radio Aristocrats</a> as part of their Aprize Awards
       <br />In the previous years the detailed analysis was done by
-      <a href="https://texty.org.ua/d/2019/aprize/">Texty.org.ua</a>
+      <a
+        href="https://texty.org.ua/d/2019/aprize/"
+      >Texty.org.ua</a>
     </p>
 
     <InfoCard title="Some numbers" class="mt-5">
@@ -40,6 +43,19 @@
 <script setup>
 import InfoCard from "./InfoCard.vue";
 import CircleIndicator from "./CircleIndicator.vue";
+import LanguageSwitch from "./LanguageSwitch.vue";
+import { ref, watch } from "vue";
+import { useI18n } from 'vue-i18n'
+
+const { locale } = useI18n({ useScope: 'global' });
+
+const currentLanguage = ref("en");
+
+
+watch(currentLanguage, (currentValue, oldValue) => {
+  locale.value = currentValue;
+});
+
 </script>
 
 <style scoped>
