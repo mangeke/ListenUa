@@ -8,7 +8,10 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.0",
+    "crossfilter2": "^1.5.4",
+    "dc": "3.2.2",
     "postcss": "^8.3.11",
+    "rollup-plugin-csv": "^1.0.2",
     "tailwindcss": "^2.2.19",
     "vue": "^3.2.16",
     "vue-i18n": "^9.2.0-beta.17"
